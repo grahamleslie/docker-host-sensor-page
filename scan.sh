@@ -39,7 +39,7 @@ function write_pages() {
 
 for (( ; ; ))
 do
-    clear_page
-    write_page
+    clear_pages
+    write_pages
     sleep 60
 done
