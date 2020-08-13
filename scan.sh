@@ -22,11 +22,11 @@ function write_page() {
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 64px">
       <h1>System Sensor Data</h1>
-      <code>
+      <pre>
         $DATA
-      </code>
+      </pre>
       <small>Captured at $DATE.</small>
     </div>
   </body>
