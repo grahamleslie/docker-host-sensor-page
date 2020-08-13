@@ -1,18 +1,27 @@
 #!/bin/bash
- 
+
+PAGE=/usr/share/nginx/html/index.html
+
 for (( ; ; ))
 do
-    rm -rf /usr/share/nginx/html/index.html
-
-    DATA=$(sensors)
-    
-echo "
-<html>
-<code>
-$DATA
-</code>
-</html>
-" > /usr/share/nginx/html/index.html
-
+    clear_page
+    write_page
     sleep 60
 done
+
+function clear_page() {
+    rm -rf $PAGE
+}
+
+function write_page() {
+    DATA=$(sensors)
+    CONTENT="
+    <html>
+    <pre>
+    $DATA
+    </pre>
+    </html>
+    "
+
+    echo $CONTENT > $PAGE
+}
