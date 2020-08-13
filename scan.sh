@@ -24,7 +24,7 @@ function write_page() {
     <div class="container">
       <h1>System Sensor Data</h1>
       <pre>
-        $DATA
+$DATA
       </pre>
       <small>Captured at $DATE.</small>
     </div>
