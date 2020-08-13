@@ -6,7 +6,7 @@ do
 
     DATA = sensors
     
-"
+echo "
 <html>
 <plaintext>
 $DATA
