@@ -8,15 +8,12 @@ function clear_page() {
 
 function write_page() {
     DATA=$(sensors)
-    CONTENT="
-    <html>
-    <pre>
-    $DATA
-    </pre>
-    </html>
-    "
-
-    echo $CONTENT > $PAGE
+    echo "<html>
+<pre>
+$DATA
+</pre>
+</html>
+" > $PAGE
 }
 
 for (( ; ; ))
