@@ -1,45 +1,27 @@
 #!/bin/bash
 
-ROOT=/usr/share/nginx/html
-INDEX=$ROOT/index.html
-LSHW=$ROOT/lshw.html
+PAGE=/usr/share/nginx/html/index.html
 
-function clear_pages() {
-    rm -rf $INDEX
-    rm -rf $LSHW
+function clear_page() {
+    rm -rf $PAGE
 }
 
-function write_index() {
-    HOSTNAME=$(hostname)
+function write_page() {
     DATA=$(sensors)
     DATE=$(date)
     echo "<html>
-<h1>$HOSTNAME Sensor Data</h1>
+<h1>System Sensor Data</h1>
 <pre>
 $DATA
 </pre>
 <small>Captured at $DATE.</small>
-<ul>
-    <li>
-        <a href="/lshw.html">LSHW</a>
-    </li>
-</ul>
 </html>
-" > $INDEX
-}
-
-function write_lshw() {
-    lshw -html > $LSHW
-}
-
-function write_pages() {
-    write_index
-    write_lshw
+" > $PAGE
 }
 
 for (( ; ; ))
 do
-    clear_pages
-    write_pages
+    clear_page
+    write_page
     sleep 60
 done
