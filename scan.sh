@@ -8,9 +8,9 @@ do
     
 echo "
 <html>
-<plaintext>
+<code>
 $DATA
-</plaintext>
+</code>
 </html>
 " > /usr/share/nginx/html/index.html
 
