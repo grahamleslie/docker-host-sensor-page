@@ -4,7 +4,7 @@ for (( ; ; ))
 do
     rm -rf /usr/share/nginx/html/index.html
 
-    DATA = sensors
+    DATA=$(sensors)
     
 echo "
 <html>
