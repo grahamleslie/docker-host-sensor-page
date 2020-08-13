@@ -19,6 +19,11 @@ function write_index() {
 $DATA
 </pre>
 <small>Captured at $DATE.</small>
+<ul>
+    <li>
+        <a href="/lshw.html">LSHW</a>
+    </li>
+</ul>
 </html>
 " > $INDEX
 }
