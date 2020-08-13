@@ -6,4 +6,4 @@ RUN rm -rf /usr/share/nginx/html/index.html
 
 COPY scan.sh /bin/scan.sh
 
-CMD sensors-detect --auto && /bin/scan.sh
+CMD sensors-detect --auto && service nginx start && /bin/scan.sh
