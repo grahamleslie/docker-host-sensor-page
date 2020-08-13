@@ -1,1 +1,0 @@
-* * * * * sensors > /usr/share/nginx/html/index.html >> /var/log/cron.log 2>&1
