@@ -10,18 +10,15 @@ function write_page() {
     DATA=$(sensors)
     DATE=$(date)
     echo "<!doctype html>
-<html lang="en">
+<html lang=\"en\">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset=\"utf-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
+    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\" integrity=\"sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z\" crossorigin=\"anonymous\">
     <title>System Sensor Data</title>
   </head>
   <body>
-    <br>
-    <br>
-    <br>
-    <div class="container">
+    <div class=\"container\" style=\"margin-top: 32px\">
       <h1>System Sensor Data</h1>
       <pre>
 $DATA
